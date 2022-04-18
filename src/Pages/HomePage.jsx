@@ -10,9 +10,9 @@ const HomePage = () => {
   const array = ["A","B","C","D"];
   const [array2, setArray2] = useState([]);
   let rarray = [];
-  const reverseArray = () => {
 
-    rarray = array.map((item, idx) => array[array.length - 1 - idx]);
+  const reverseArray = () => {
+    rarray = array.map((item, idx) => array[array.length - 1 - ]);
     setArray2(rarray);
   }
 

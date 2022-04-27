@@ -1,5 +1,15 @@
  
- var arr1 = [45, 99, 55, 17, 93, 23];
+ /*
+ CODE REVIEW
+ 1- use ES6 variable declaration instead of var
+ 2- try to do this without using sort()
+ 3- Format and comment the code
+ 4- Remove console logs
+ 5- Use stric equality (===)
+ 6- Array.prototype.intersection having issues, not working
+ */
+
+ var arr1 = [45, 99, 55, 17, 93, 23]; 
  var arr2 = [45, 18, 93, 7, 17];
 
 function intersection(arr1, arr2) {

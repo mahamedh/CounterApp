@@ -1,3 +1,4 @@
+
  
  /*
  CODE REVIEW
@@ -9,64 +10,42 @@
  6- Array.prototype.intersection having issues, not working
  */
 
- var arr1 = [45, 99, 55, 17, 93, 23]; 
- var arr2 = [45, 18, 93, 7, 17];
+ const arr1=[12,3,45,65,75];
+ const arr2=[12,65,53,54,45,75];
 
 function intersection(arr1, arr2) {
-
-  arr1.sort();                      
-  arr2.sort();
-  var common = [];                
-  var i = 0, j = 0;                
-  
-  while(i<arr1.length && j<arr2.length) {
-    
-    if(arr1[i] == arr2[j]) {       
-      common.push(arr1[i]);
-      i++;
-      j++;
-    }
-    else if(arr1[i] < arr2[j]) {  
-      i++;                      
-    }                             
-    else {
-      j++;
+ let common = [];                  
+  for(let i=0 ; i<arr1.length ; ++i) {
+    for(let j=0 ; j<arr2.length ; ++j) {
+      if(arr1[i] == arr2[j]) {       
+        common.push(arr1[i]);        
+      }
     }
   }
-  console.log(common);
-  return common;
-}
-
-
-Array.prototype.intersection = function(array) { 
-
-  this.sort();                      
-  arr2.sort();
-  var common = [];                
-  var i = 0, j = 0;                
   
-  while(i<this.length && j<arr2.length) {
-    
-    if(this[i] == arr2[j]) {        
-      common.push(this[i]);
-      i++;
-      j++;
-    }
-    else if(this[i] < arr2[j]) {  
-      i++;                        
-    }                            
-    else {
-      j++;
+  return common;   
+
+}               
+
+
+const commonElements = intersection(arr1, arr2);
+
+Array.prototype.intersection = function(array) {
+
+  let common = [];                  
+  for(let i=0 ; i<this.length ; ++i) {
+    for(let j=0 ; j<arr2.length ; ++j) {
+      if(this[i] == arr2[j]) {       
+        common.push(this[i]);        
+      }
     }
   }
-  console.log(common)
-  return common;
+  
+  return common;   
 
 }
 
-const first=intersection(arr1,arr2);
-const second=arr1.intersection(arr2);
+ const commonElements2= arr1.intersection(arr2);
+ console.log(commonElements)
+ console.log(commonElements2);
 
-
-console.log(first);
-console.log(second);

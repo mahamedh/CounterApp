@@ -1,13 +1,13 @@
  
- var arr1 = [45, 99, 55, 17, 93, 23];
- var arr2 = [45, 18, 93, 7, 17];
+ const arr1 = [45, 99, 55, 17, 93, 23];
+ const arr2 = [45, 18, 93, 7, 17];
 
 function intersection(arr1, arr2) {
 
   arr1.sort();                      
   arr2.sort();
-  var common = [];                
-  var i = 0, j = 0;                
+  let common = [];                
+  let i = 0, j = 0;                
   
   while(i<arr1.length && j<arr2.length) {
     
@@ -32,8 +32,8 @@ Array.prototype.intersection = function(array) {
 
   this.sort();                      
   arr2.sort();
-  var common = [];                
-  var i = 0, j = 0;                
+  let common = [];                
+  let i = 0, j = 0;                
   
   while(i<this.length && j<arr2.length) {
     

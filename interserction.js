@@ -10,6 +10,8 @@
  6- Array.prototype.intersection having issues, not working
  */
 
+ const arr1=[12,3,45,65,75];
+ const arr2=[12,65,53,54,45,75];
 
 function intersection(arr1, arr2) {
  let common = [];                  
@@ -44,5 +46,6 @@ Array.prototype.intersection = function(array) {
 }
 
  const commonElements2= arr1.intersection(arr2);
-
+ console.log(commonElements)
+ console.log(commonElements2);
 

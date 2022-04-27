@@ -1,5 +1,15 @@
-const arr1 = [45,345,56,18];
-const arr2 = [45, 18, 93,];
+
+ 
+ /*
+ CODE REVIEW
+ 1- use ES6 variable declaration instead of var
+ 2- try to do this without using sort()
+ 3- Format and comment the code
+ 4- Remove console logs
+ 5- Use stric equality (===)
+ 6- Array.prototype.intersection having issues, not working
+ */
+
 
 function intersection(arr1, arr2) {
  let common = [];                  
@@ -35,5 +45,4 @@ Array.prototype.intersection = function(array) {
 
  const commonElements2= arr1.intersection(arr2);
 
-console.log(commonElements);
-console.log(commonElements2);
+

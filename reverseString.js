@@ -6,5 +6,6 @@ function reverseString(array) {
 
   rarray = array.map((item, idx) => array[array.length - 1 - idx]);
   return rarray;
+  
 }
 

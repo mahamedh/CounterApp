@@ -2,7 +2,7 @@
  var arr1 = [45, 99, 55, 17, 93, 23];
  var arr2 = [45, 18, 93, 7, 17];
 
-function getCommon(arr1, arr2) {
+function intersection(arr1, arr2) {
 
   arr1.sort();                      
   arr2.sort();
@@ -28,7 +28,7 @@ function getCommon(arr1, arr2) {
 }
 
 
-Array.prototype.getCommon = function(array) { 
+Array.prototype.intersection = function(array) { 
 
   this.sort();                      
   arr2.sort();
@@ -54,8 +54,8 @@ Array.prototype.getCommon = function(array) {
 
 }
 
-const first=getCommon(arr1,arr2);
-const second=arr1.getCommon(arr2);
+const first=intersection(arr1,arr2);
+const second=arr1.intersection(arr2);
 
 
 console.log(first);

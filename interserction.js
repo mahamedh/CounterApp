@@ -10,47 +10,63 @@ CODE REVIEW
 6- Array.prototype.intersection having issues, not working
 */
 
-const arr1 = [12, 3, 45, 65, 75, 67];
-const arr2 = [12, 65, 53, 54, 67, 45, 75];
 
-function intersection(arr1, arr2) {
-  let common = [];
+function intersection(array1, array2) {
 
-  for (let i = 0; i < arr1.length; ++i) {
+  const removeDuplicates = new Set();    // set not add duplicate elements...
 
-    for (let j = 0; j < arr2.length; ++j) {
+  const commonArray = [];
 
-      if (arr1[i] === arr2[j]) {
-        common.push(arr1[i]);
-      }
 
-    }
+  for (let i = 0; i < array1.length; i++)   // to remove all duplicate values
+
+    removeDuplicates.add(array1[i]);
+
+
+  for (let i = 0; i < array2.length; i++) {         // loop through second array while on each index comapre with elements of duplicates removed
+                                                 // array and pushes in to common array
+    if (removeDuplicates.has(array2[i])) {
+      commonArray.push(array2[i]);
+    } 
+    
   }
 
-  return common;
+  return commonArray;
+
 }
 
 
-const commonElements = intersection(arr1, arr2);
+Array.prototype.intersection = function(array)
+ {
+  const removeDuplicates = new Set();    
 
-Array.prototype.intersection = function (array) {
+  const commonArray = [];
 
 
-  let common = [];
+  for (let i = 0; i < this.length; i++)  
 
-  for (let i = 0; i < this.length; ++i) {
+    removeDuplicates.add(this[i]);
 
-    for (let j = 0; j < array.length; ++j) {
 
-      if (this[i] === array[j]) {
-
-          common.push(this[i]);
-      }
-
-    }
+  for (let i = 0; i < array.length; i++) {        
+                                                
+    if (removeDuplicates.has(array[i])) {
+      commonArray.push(array[i]);
+    } 
+    
   }
-  return common;
+
+  return commonArray;
 }
 
-const commonElements2 = arr1.intersection(arr2);
 
+const arr1 = [7, 1, 4, 5, 6, 5];
+
+const arr2 = [3, 8, 4];
+
+intersection(arr1, arr2);
+arr1.intersection(arr2);
+
+
+//Time complexcity
+//set is implementation of hash table and it got time complexcity of O(1)in average

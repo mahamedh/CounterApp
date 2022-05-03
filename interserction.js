@@ -12,8 +12,13 @@ CODE REVIEW
 
 
 function intersection(array1, array2) {
+  
+    const output = []; 
 
-  const removeDuplicates = new Set();    // set not add duplicate elements...
+    for(let i = 0; i < nums1.length; i++) if(nums1.indexOf(nums2[i]) !== -1) output.push(nums1[i]);
+    return output;
+
+  /*const removeDuplicates = new Set();    // set not add duplicate elements...
 
   const commonArray = [];
 
@@ -31,7 +36,7 @@ function intersection(array1, array2) {
     
   }
 
-  return commonArray;
+  return commonArray;*/
 
 }
 
